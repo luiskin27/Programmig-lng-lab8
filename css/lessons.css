@@ -27,6 +27,7 @@
     margin: 20px 0;
 }
 
+
 /* TAB SLIDER */
 
 .tab_slider {
@@ -44,7 +45,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 170px;
+    height: 300px;
 }
 
 .tab_content_block p {
@@ -85,6 +86,8 @@
     align-items: center;
     margin-top: 50px;
 }
+
+
 
 /*------CARD SWITCHER------*/
 
