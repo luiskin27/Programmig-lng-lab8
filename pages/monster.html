@@ -2,54 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Monster</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/core.css">
-    <link rel="stylesheet" href="../css/monster.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jump game</title>
+    <link rel="stylesheet" href="/index.html">
+    <link rel="stylesheet" href="/css/monster.css">
+   
 </head>
 <body>
-<div class="wrapper">
-    <div class="header">
-        <div class="container">
-            <div class="inner_header">
-                <a href="../index.html">
-                    <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
-                    </div>
-                </a>
-                <ul class="menu">
-                    <li class="menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
-                    </li>
-                    <li class="menu_link">
-                        <a href="" target="_blank">Send hw</a>
-                    </li>
-                </ul>
-                <button class="btn" id="btn-get">Click me!</button>
+       <h2 class="score">Score: 0</h2>
+         <div class="screen">
+              <div class="player"><img src="/Img/hero (2).png" alt=""></div>
+              <div class="enmy"><img src="/Img/enemy.png" alt=""></div>
             </div>
-        </div>
-    </div>
-</div>
-<canvas id="canvas"></canvas>
-
-<div class="modal">
-    <div class="modal_dialog">
-        <div class="modal_content">
-            <form action="#">
-                <div class="modal_close">&times;</div>
-                <div class="modal_title">Мы свяжемся с вами как можно быстрее!</div>
-                <input required placeholder="Ваше имя" name="name" type="text" class="modal_input">
-                <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal_input">
-                <button class="btn btn_dark btn_min">Перезвонить мне</button>
-            </form>
-        </div>
-    </div>
-</div>
-
+            
+            <p class="info">
+                Press Space to jump
+            </p>
+        
 </body>
-<script src="../js/monster.js"></script>
-<script src="../js/modal.js"></script>
+ <script src="/js/monster.js" defer></script>
 </html>

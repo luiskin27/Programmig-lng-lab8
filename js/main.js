@@ -4,7 +4,7 @@ const buttonsColor = document.querySelectorAll('.btn-color')
 const javaScript = document.querySelector('#js-color')
 
 const generateRandomColor = () => {
-    const hexCodes = '0123456789ABCDEF'
+    const hexCodes = '19245746904'
     let color = ''
     for (let i = 0; i < 6; i++) {
         color += hexCodes[Math.floor(Math.random() * hexCodes.length)]
@@ -75,3 +75,15 @@ prev.onclick = () => {
 }
 
 autoSlider(index)
+
+// === Общий код для ВСЕХ страниц ===
+// Добавь это в каждый JS файл или в один общий main.js
+
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a');
+  if (link && link.href && !link.href.startsWith('#') && !link.href.includes('javascript:')) {
+    const clickSound = new Audio('sound/click.mp3'); // путь от корня
+    clickSound.volume = 0.6;
+    clickSound.play();
+  }
+});

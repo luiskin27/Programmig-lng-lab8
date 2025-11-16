@@ -2,7 +2,9 @@
 
 .header {
     height: 80px;
-    background: #2c2d2f;
+    /* background-color:rgba(255, 255, 255, 0.2); */
+     backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     width: 100%;
@@ -24,15 +26,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    height: 60px;
-    width: fit-content;
-    background: var(--orange);
+    font-size:8px;
+   
     padding: 8px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
 }
+.logotype img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 50px;
+    height: 50px;
+   
+    background-image: url(/Img/Item_Anemoculus.ico);
+    background-size: cover;
+    padding: 8px;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /* HEADER MENU */
 
@@ -43,8 +59,10 @@
 }
 
 .menu_link a {
-    color: var(--orange);
-    text-transform: uppercase;
+    color:rgb(68, 118, 210);
+    font-weight: 800;
+    font-size:x-large;
+    /* text-transform: uppercase; */
 }
 
 .menu_link a:hover {
@@ -55,7 +73,21 @@
 
 .main_block {
     padding: 100px 0;
-    background: black;
+    background-image: url(/Img/menu-background.jpg);
+    background-size:cover;
+}
+
+.inner_main h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: #000 1px 1px 2px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:55px ;
+    
 }
 
 /* BUTTONS COLOR PICKER */
@@ -73,38 +105,166 @@
 
 /* FOOTER */
 
-.footer {
-    background: #2c2d2f;
-    width: 100%;
+.custom-footer {
+  background-image: url(/Img/gameoverBG.jpg) ;
+
+  padding: 40px 20px 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.inner_footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+.custom-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.footer h2 {
-    text-transform: uppercase;
-    color: var(--orange);
-    font-weight: 600;
+.mailing-section h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
+.mailing-section p {
+  margin: 0 0 20px;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.subscribe-form input {
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  width: 100%;
+  max-width: 300px;
+}
+
+.subscribe-form input::placeholder {
+  color: #ffffff;
+}
+
+.subscribe-form button {
+  padding: 14px 24px;
+  background-color:var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-form button:hover {
+  background-color: #333;
+}
+
+.footer-nav {
+  margin: 40px 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  font-size: 0.95rem;
+}
+
+.footer-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.social-icons svg {
+  width: 100%;
+  height: 100%;
+  fill: #666;
+  transition: fill 0.3s;
+}
+
+.social-icons a:hover svg {
+  fill: #000;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+  .subscribe-form input {
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .subscribe-form button {
+    border-radius: 8px;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
 
 /* SLIDER BLOCK */
 
 .slider_block {
     padding: 100px 0;
-    background: black;
+    background-image: url(/Img/liyueBG.png);
 }
 
 .slider {
     position: relative;
     width: 100%;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
-    border: 3px solid var(--orange);
+    border: 3px solid blur(10px);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -126,7 +286,15 @@
     color: white;
     margin: 0 auto;
     width: 500px;
+    height: 700px;
     text-align: center;
+
+}
+
+.slide_card img {
+    width: 170px;
+    height: 270px;
+    justify-content: right;
 }
 
 .slide_card h3 {
@@ -137,12 +305,14 @@
 
 .slide_card p {
     font-size: 16px;
-    text-align: justify;
+    text-align:justify;
     margin: 10px 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 .slide_card a {
-    color: var(--orange);
+    color:rgb(74, 74, 218);
     text-decoration: underline;
 }
 
@@ -150,10 +320,18 @@
     display: block;
 }
 
+/* .btn-slide {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white blur(10px);
+} */
+
+
+
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
+    background-image: url(/Img/отряд.png);
+    background-size: cover;
     padding: 100px 0;
 }
 
@@ -227,8 +405,10 @@
 /*-------BOTTLE-------*/
 
 .botlle {
-    background: black;
+    background-image: url(/Img/bg.jpg);
+    background-size:cover;
     padding: 100px 0;
+    height: 600px;
 }
 
 .bottle_inner {

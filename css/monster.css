@@ -1,34 +1,82 @@
-body,
-html {
+*{
     margin: 0;
     padding: 0;
-    position: fixed;
-    background: black;
+    box-sizing: border-box;
+    font-style: 15pt;
 }
 
-.header {
-    position: static !important;
+
+body{
+   width: 100vw;
+   height: 90vh;
+   display: flex;
+   align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    background-image: url(/Img/liyueBG.png);
+    background-size: cover;
 }
 
-.buymeacoffee {
-    text-decoration: none;
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    background: #FFDD00;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    transition: all 0.1s linear;
-    box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
-    z-index: 1000;
+
+
+.screen{
+    width: 100%;
+    height: 80%;
+    border: 1px solid #ffff;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 5% 10%;
+    padding: relative;
+    overflow: hidden;
+}
+
+.player, .enmy {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.player {
+    /* background: #13a4ff; */
+    bottom: 4.5%; /* фиксируем стартовую высоту */
+    left: 15%; /* игрок слева */
+    transition: bottom 0.3s;
+}
+
+.enmy {
+   
+    /* background: #f9073b; */
+    bottom: 4.5%; /* тот же уровень, чтобы стояли на одной линии */
+    left: 130%;
+}
+
+
+.score{
+     width: 250px;
+     height: 50px;
+     background: #0788f9;
+        color: white;
+        position: absolute;
+        padding: 5px 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Courier New', Courier, monospace;
+        top: 10%;
+        left: 10%;    
+    }
+
+.info{
+    width: 100%;
+    position: absolute;
+    color: white;
+    bottom: 17%;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.buymeacoffee:hover {
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
 }
